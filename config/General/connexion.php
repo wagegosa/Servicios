@@ -11,7 +11,7 @@ class DataBase {
   protected $pwd = "";
   // protected $pwd = "W@lt3rG3r4rd0@2019";
   //Nombre de la Base de datos.
-  protected $dbh = "Servicios";
+  protected $dbh = "todosistemas";
   //Enlace con la base de datos MySQL
   protected $dbCon;
 

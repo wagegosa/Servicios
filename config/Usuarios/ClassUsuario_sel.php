@@ -1,19 +1,16 @@
  <?php
 
-  class Cliente extends DataBase
+  class Usuario extends DataBase
   {
-    public $IdCliente;
-    public $nombNombrere;
-    public $Apellido;
-    public $Direccion;
-    public $Telefono;
-    public $Celular;
+    public $Idusuario;
+    public $Nombre;
+    public $estado;
 
-    public function listarCliente()
+    public function listarUsuario()
     {
       try {
         parent::Conexion();
-        $sql = "SELECT * FROM Servicios.Cliente";
+        $sql = "SELECT * FROM todosistemas.usuario";
         $qry = $this->dbCon->prepare($sql);
         $qry->execute();
         $row = $qry->fetchAll(PDO::FETCH_OBJ);

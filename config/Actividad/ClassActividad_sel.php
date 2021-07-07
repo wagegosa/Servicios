@@ -1,18 +1,22 @@
  <?php
 
-  class Vehiculo extends DataBase
+  class Actividad extends DataBase
   {
-    public $IdVehiculo;
-    public $Placa;
-    public $Marca;
-    public $Modelo;
-    public $Color;
+    public $IdActividad;
+    public $actividad;
+    public $fechaAsignado;
+    public $HoraAsignado;
+    public $fechaRealizacion;
+    public $horaRealizacion;
+    public $diasRestraso;
+    public $estado;
+    public $asignado;
 
-    public function listarVehiculo()
+    public function listarActividad()
     {
       try {
         parent::Conexion();
-        $sql = "SELECT * FROM Servicios.Vehiculo";
+        $sql = "SELECT * FROM todosistemas.actividadview";
         $qry = $this->dbCon->prepare($sql);
         $qry->execute();
         $row = $qry->fetchAll(PDO::FETCH_OBJ);
